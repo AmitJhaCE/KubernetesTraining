@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo
+  name: gohello
   labels:
-    app: demo
+    app: gohello
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: gohello
   template:
     metadata:
       labels:
-        app: demo
+        app: gohello
     spec:
       containers:
-        - name: demo
-          image: cloudnatived/demo:hello
+        - name: gohello
+          image: creativeentropyaj/gohello
           ports:
           - containerPort: 8888

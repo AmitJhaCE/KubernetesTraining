@@ -5,7 +5,7 @@ metadata:
   labels:
     app: gohello
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: gohello
@@ -15,7 +15,7 @@ spec:
         app: gohello
     spec:
       containers:
-        - name: gohello
-          image: creativeentropyaj/gohello
-          ports:
-          - containerPort: 8888
+      - name: gohello
+        image: creativeentropyaj/hellohost
+        ports:
+        - containerPort: 8888
